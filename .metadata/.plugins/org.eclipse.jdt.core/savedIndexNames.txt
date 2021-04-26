@@ -1,0 +1,16 @@
+INDEX VERSION 1.131+C:\oracle\engagement\2020-21\json4alltitude\code\workshop-soda-oracle\.metadata\.plugins\org.eclipse.jdt.core
+3639193736.index
+3803553363.index
+2510922358.index
+2822686899.index
+3880462886.index
+2597166139.index
+1817343601.index
+2101465168.index
+1817789194.index
+3929082858.index
+1422056703.index
+3570995755.index
+2155271389.index
+842025317.index
+1491995597.index

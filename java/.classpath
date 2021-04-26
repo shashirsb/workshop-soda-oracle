@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/javax.json-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/json-20200518.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/mongo-java-driver-3.12.7.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/ons.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/oraclepki.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/orai18n.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/orajsoda-1.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/org.apache.commons.io.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/osdt_cert.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/osdt_core.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/ucp.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/xdb.jar"/>
+	<classpathentry kind="lib" path="C:/oracle/engagement/2020-21/json4alltitude/code/soda-jar/xmlparserv2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
