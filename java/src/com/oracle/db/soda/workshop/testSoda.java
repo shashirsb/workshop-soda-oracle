@@ -29,7 +29,9 @@ import java.nio.file.Paths;
 
 import oracle.jdbc.OracleConnection;
 import com.oracle.db.soda.workshop.menuList;
-import com.oracle.db.soda.workshop.sodaProducer;
+import com.oracle.db.soda.workshop.Producer;
+
+import org.apache.commons.lang3.StringUtils;
  
 public class testSoda
 {
@@ -37,7 +39,7 @@ public class testSoda
 
   public static void main(String[] arg)
   {
-	  sodaProducer sodaproducer = new sodaProducer();
+	  Producer sodaproducer = new Producer();
  
       try
       {

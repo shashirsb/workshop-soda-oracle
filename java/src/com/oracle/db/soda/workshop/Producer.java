@@ -7,7 +7,7 @@ import java.util.Properties;
 import oracle.soda.OracleDatabase;
 import oracle.soda.rdbms.OracleRDBMSClient;
 
-public class sodaProducer {
+public class Producer {
 	
 	 public static Connection conn = null;
 	    public static OracleDatabase db = null;
