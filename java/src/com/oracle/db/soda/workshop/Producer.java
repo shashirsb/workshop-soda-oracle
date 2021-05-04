@@ -9,7 +9,7 @@ import oracle.soda.rdbms.OracleRDBMSClient;
 
 public class Producer {
 	
-	 public static Connection conn = null;
+	 public Connection conn = null;
 	    public static OracleDatabase db = null;
 	    
 	    /**
@@ -25,7 +25,10 @@ public class Producer {
 	
 	public void dbDisconnect() {
 		System.out.println("Disconnecting from Oracle SODA");
-	      try { if (conn != null)  conn.close(); }
+	      try { if (conn != null)  conn.close(); 
+	      System.out.println("Closed db connection, thank you for using oracle soda.");
+	      System.exit(0);
+	      }
 	      catch (Exception e) { }
 	    
 	}

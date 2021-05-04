@@ -13,8 +13,10 @@ public class menuList {
 	Scanner input = new Scanner(System.in);
 	private static int menu, subMenuCollection, subMenuDocument;
 	private static String COLLECTION_NAME;
-	private static OracleDatabase db;
-	private static OracleCollection col;
+	
+	Producer sodaproducer = new Producer();
+	public OracleDatabase db = sodaproducer.dbConnect();
+	public static OracleCollection col;
 
 	public void mainMenu() {
 
@@ -23,6 +25,7 @@ public class menuList {
 			this.cleanScreen();
 			if (menu == 3) {
 				System.out.println("Exiting the app");
+				sodaproducer.dbDisconnect();
 				break;
 			}
 
@@ -75,7 +78,7 @@ public class menuList {
 				COLLECTION_NAME = input.next();
 
 				try {
-					db = sodaproducer.dbConnect();
+					//db = sodaproducer.dbConnect();
 					col = this.db.openCollection(COLLECTION_NAME);
 					if (col != null) {
 						System.out.println("\nCollection " + COLLECTION_NAME + " exists :-) ");
@@ -84,7 +87,7 @@ public class menuList {
 						COLLECTION_NAME = null;
 					}
 
-					sodaproducer.dbDisconnect();
+					//sodaproducer.dbDisconnect();
 				} catch (OracleException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -97,11 +100,11 @@ public class menuList {
 
 				try {
 
-					db = sodaproducer.dbConnect();
+					//db = sodaproducer.dbConnect();
 					List<String> names = db.admin().getCollectionNames();
 					for (String name : names)
 						System.out.println("Collection name: " + name);
-					sodaproducer.dbDisconnect();
+					//sodaproducer.dbDisconnect();
 					System.out.println("\n Please enter 'Y' to continue");
 					enter = input.next();
 				} catch (OracleException e) {
@@ -115,10 +118,10 @@ public class menuList {
 				try {
 					System.out.println("\n Enter the name of the collection");
 					COLLECTION_NAME = input.next();
-					db = sodaproducer.dbConnect();
+					//db = sodaproducer.dbConnect();
 					col = this.db.admin().createCollection(COLLECTION_NAME);
 					System.out.println("\nCollection " + COLLECTION_NAME + " was created");
-					sodaproducer.dbDisconnect();
+					//sodaproducer.dbDisconnect();
 					System.out.println("\n Please enter 'Y' to continue");
 					enter = input.next();
 				} catch (OracleException e) {
@@ -131,11 +134,11 @@ public class menuList {
 				try {
 					System.out.println("\n Enter the name of the collection");
 					COLLECTION_NAME = input.next();
-					db = sodaproducer.dbConnect();
+					//db = sodaproducer.dbConnect();
 					col = this.db.admin().createCollection(COLLECTION_NAME);
 					col.admin().drop();
 					System.out.println("\nCollection " + COLLECTION_NAME + " dropped\n");
-					sodaproducer.dbDisconnect();
+					//sodaproducer.dbDisconnect();
 					System.out.println("\n Please enter 'Y' to continue");
 					enter = input.next();
 				} catch (OracleException e) {
@@ -203,7 +206,7 @@ public class menuList {
 						System.out.println(jsonString);
 						Producer sodaproducer = new Producer();
 
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.admin().createCollection(COLLECTION_NAME);
 
 						com.oracle.db.soda.workshop.Documents createdoc = new Documents();
@@ -242,7 +245,7 @@ public class menuList {
 						System.out.println(jsonFile);
 						Producer sodaproducer = new Producer();
 
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.openCollection(COLLECTION_NAME);
 
 						com.oracle.db.soda.workshop.Documents document = new Documents();
@@ -272,7 +275,7 @@ public class menuList {
 						System.out.println("\n Please enter document in json format:");
 						String docToSave = input.next();
 						Producer sodaproducer = new Producer();
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.openCollection(COLLECTION_NAME);
 						com.oracle.db.soda.workshop.Documents documents = new Documents();
 						Boolean getDocStatus = documents.saveDocument(db, col, docToSave, docKey);
@@ -297,7 +300,7 @@ public class menuList {
 
 					try {
 						Producer sodaproducer = new Producer();
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.admin().createCollection(COLLECTION_NAME);
 						com.oracle.db.soda.workshop.Documents getdoc = new Documents();
 						Boolean getDocStatus = getdoc.getAllDocument(col);
@@ -324,7 +327,7 @@ public class menuList {
 						System.out.println("\n Please enter key of the document you want to find:");
 						String docKey = input.next();
 						Producer sodaproducer = new Producer();
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.openCollection(COLLECTION_NAME);
 						com.oracle.db.soda.workshop.Documents getdoc = new Documents();
 						Boolean getDocStatus = getdoc.getDocumentByKey(col, docKey);
@@ -361,7 +364,7 @@ public class menuList {
 						String values = input.nextLine();
 
 						Producer sodaproducer = new Producer();
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.openCollection(COLLECTION_NAME);
 						com.oracle.db.soda.workshop.Documents documents = new Documents();
 
@@ -394,7 +397,7 @@ public class menuList {
 						System.out.println("\n Please enter JSON document you want to replace : ");
 						String docContent = input.next();
 						Producer sodaproducer = new Producer();
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.openCollection(COLLECTION_NAME);
 						com.oracle.db.soda.workshop.Documents documents = new Documents();
 						Boolean getDocStatus = documents.replaceDocumentByKey(db,col, docKey, docContent);
@@ -422,7 +425,7 @@ public class menuList {
 						System.out.println("\n Please enter key of the document you want to remove:");
 						String docKey = input.next();
 						Producer sodaproducer = new Producer();
-						db = sodaproducer.dbConnect();
+						//db = sodaproducer.dbConnect();
 						col = this.db.openCollection(COLLECTION_NAME);
 						com.oracle.db.soda.workshop.Documents documents = new Documents();
 						Boolean getDocStatus = documents.removeDocumentByKey(col, docKey);
