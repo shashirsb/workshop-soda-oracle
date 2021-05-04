@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Properties;
 
+import oracle.jdbc.OracleConnection;
 import oracle.soda.OracleDatabase;
 import oracle.soda.rdbms.OracleRDBMSClient;
 
@@ -33,40 +34,9 @@ public class Producer {
 	    
 	}
 	 public OracleDatabase dbConnect(){
-// Set up the JDBC connection string, schemaName, and password.
-// Replace with info appropriate for your Oracle Database instance.
-//	      String url = "jdbc:oracle:thin:@//hostName:port/serviceName";
-//	      Properties props = new Properties();
-//	      props.setProperty("user", schemaName);
-//	      props.setProperty("password", password);
-// 
-//	      OracleConnection conn = null;
+
 	        try {       
 	        	
-        	 // Get a JDBC connection to an Oracle instance.
-	         //	conn = (OracleConnection) DriverManager.getConnection(url, props);
-	         //
-	         // Enable JDBC implicit statement caching
-             // conn.setImplicitCachingEnabled(true);
-             //	conn.setStatementCacheSize(50);
-	         // 
-             // Get an OracleRDBMSClient - starting point of SODA for Java application.
-             //	OracleRDBMSClient cl = new OracleRDBMSClient();
-	         // 
-	         // Get a database.
-	         //	OracleDatabase db = cl.getDatabase(conn);
-	        	
-	         //
-             // load password from file in wallet location
-			 //	StringBuilder contentBuilder = new StringBuilder();
-			 //	   try (Stream<String> stream = Files.lines( Paths.get(WALLET_LOCATION + "/" + ATP_PASSWORD_FILENAME), StandardCharsets.UTF_8)) {
-			 //	        stream.forEach(s -> contentBuilder.append(s).append("\n"));
-			 //	   }
-			 //	   catch (IOException e) {
-			 //	         e.printStackTrace();
-			 //	    }
-			
-			 //	DB_PASSWORD = contentBuilder.toString();
 
 	            // set DB properties
 	            Properties props = new Properties();
@@ -92,4 +62,35 @@ public class Producer {
 	        return db;
 	    }
 
+	 public OracleDatabase dbConnectSimple(){
+		// Set up the JDBC connection string, schemaName, and password.
+		// Replace with info appropriate for your Oracle Database instance.
+			      String url = "jdbc:oracle:thin:@//hostName:port/serviceName";
+			      Properties props = new Properties();
+			      props.setProperty("user", "<schema_name>");
+			      props.setProperty("password", "<password>");
+
+			      OracleConnection conn = null;
+			        try {       
+			        	
+		        	 // Get a JDBC connection to an Oracle instance.
+			        conn = (OracleConnection) DriverManager.getConnection(url, props);
+			         //
+			         // Enable JDBC implicit statement caching
+		             conn.setImplicitCachingEnabled(true);
+		             conn.setStatementCacheSize(50);
+			         // 
+		             // Get an OracleRDBMSClient - starting point of SODA for Java application.
+		             OracleRDBMSClient cl = new OracleRDBMSClient();
+			         // 
+			         // Get a database.
+			         OracleDatabase db = cl.getDatabase(conn);
+			         System.out.println("DB Connection established successfully!!!");
+			         
+
+			        } catch (Exception e) {
+			            e.printStackTrace();
+			        }
+			        return db;
+			    }
 }
