@@ -135,7 +135,7 @@ public class menuList {
 					System.out.println("\n Enter the name of the collection");
 					COLLECTION_NAME = input.next();
 					//db = sodaproducer.dbConnect();
-					col = this.db.admin().createCollection(COLLECTION_NAME);
+					col = this.db.openCollection(COLLECTION_NAME);
 					col.admin().drop();
 					System.out.println("\nCollection " + COLLECTION_NAME + " dropped\n");
 					//sodaproducer.dbDisconnect();
