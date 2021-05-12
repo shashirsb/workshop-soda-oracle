@@ -30,9 +30,9 @@ public class menuList {
 			}
 
 			System.out.println("Please select the options from list :");
-			System.out.println("1. Work with JSON Collection");
-			System.out.println("2. Work with JSON Document");
-			System.out.println("3. Exit");
+			System.out.println("  1. Work with JSON Collection");
+			System.out.println("  2. Work with JSON Document");
+			System.out.println("  3. Exit");
 
 			menu = input.nextInt();
 
@@ -62,11 +62,11 @@ public class menuList {
 			}
 
 			System.out.println("Please select the options from list :");
-			System.out.println("1. Check JSON Collection Exists & Use");
-			System.out.println("2. List all JSON Collections");
-			System.out.println("3. Create new JSON Collection");
-			System.out.println("4. Drop JSON Collection");
-			System.out.println("5. Go to previous menu");
+			System.out.println("  1. Check JSON Collection Exists & Use");
+			System.out.println("  2. List all JSON Collections");
+			System.out.println("  3. Create new JSON Collection");
+			System.out.println("  4. Drop JSON Collection");
+			System.out.println("  5. Go to previous menu");
 
 			subMenuCollection = input.nextInt();
 
@@ -164,17 +164,17 @@ public class menuList {
 				break;
 			}
 
-			System.out.println("Please select the options from list :");
-			System.out.println("1. Enter/Change JSON Collection");
-			System.out.println("2. Create documents from String");
-			System.out.println("3. Create documents from File");
-			System.out.println("4. Save a document");
-			System.out.println("5. Get all documents");
-			System.out.println("6. Get document by Key");
-			System.out.println("7. Search for document with filter");
-			System.out.println("8. Replace a document");
-			System.out.println("9. Remove document by Key");
-			System.out.println("10. Go to previous menu");
+			System.out.println("  Please select the options from list :");
+			System.out.println("  1. Enter/Change JSON Collection");
+			System.out.println("  2. Create documents from String");
+			System.out.println("  3. Create documents from File");
+			System.out.println("  4. Save a document");
+			System.out.println("  5. Get all documents");
+			System.out.println("  6. Get document by Key");
+			System.out.println("  7. Search for document with filter");
+			System.out.println("  8. Replace a document");
+			System.out.println("  9. Remove document by Key");
+			System.out.println("  10. Go to previous menu");
 
 			subMenuDocument = input.nextInt();
 
@@ -237,8 +237,8 @@ public class menuList {
 
 						// [{\"name\":\"Alexander\"}, {\"name\":\"Shashi\"}]
 						System.out.println("Enter file containing json string to create document: \n");
-						System.out.println("e.g. C:\\Users\\shasi\\Desktop\\test.txt");
-						System.out.println("e.g. /home/opc/jsonfiles/test.txt \n");
+						System.out.println("  e.g. C:\\Users\\shasi\\Desktop\\test.txt");
+						System.out.println("  e.g. /home/opc/jsonfiles/test.txt \n");
 
 						String jsonFile = input.nextLine();
 

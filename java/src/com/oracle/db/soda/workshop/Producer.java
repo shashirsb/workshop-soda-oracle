@@ -16,9 +16,9 @@ public class Producer {
 	    /**
 	     * database connection info
 	     */
-	    private static boolean UseDB = true;
+	    //private static boolean UseDB = true;
 	    private final static String ATP_CONNECT_NAME = "altdb_medium";
-	    private final static String ATP_PASSWORD_FILENAME = "atp_password.txt";
+	    //private final static String ATP_PASSWORD_FILENAME = "atp_password.txt";
 	    private final static String WALLET_LOCATION = "C:/oracle/engagement/2020-21/json4alltitude/code/Wallet_ALTDB";
 	    private final static String DB_URL = "jdbc:oracle:thin:@" + ATP_CONNECT_NAME + "?TNS_ADMIN=" + WALLET_LOCATION;
 	    private final static String DB_USER = "admin";
