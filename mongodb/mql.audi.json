@@ -1,0 +1,52 @@
+db.audit.updateOne(
+  { uniqueId: "svc-001" },
+  {
+    $setOnInsert: {
+      environment: "prod",
+      serviceName: "user-authentication",
+      collectionRefId: ObjectId(),
+      status: "created",
+      createdBy: "system",
+      createdDateTime: new Date(),
+      updatedBy: "system",
+      updatedDateTime: new Date(),
+      _class: "com.company.services.JobStatus"
+    }
+  },
+  { upsert: true }
+)
+
+
+db.audit.updateOne(
+    { uniqueId: "svc-001" },
+    {
+      $push: {
+        auditTrail: {
+          status: "completed",
+          message: "Job executed successfully",
+          updatedBy: "system",
+          updatedDateTime: new Date()
+        }
+      },
+      $set: {
+        updatedBy: "system",
+        updatedDateTime: new Date()
+      }
+    }
+  )
+  
+
+
+  db.audit.find({
+    $or: [
+      { "auditTrail.fileName": "myfile.log" },
+      { "auditTrail.fileRenameTo": "myfile.log" }
+    ]
+  })
+
+  
+
+  db.audit.find({
+    "auditTrail.status": "failed"
+  })
+  

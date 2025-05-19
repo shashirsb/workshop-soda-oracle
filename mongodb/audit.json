@@ -1,0 +1,600 @@
+[{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb7956"
+  },
+  "uniqueId": "svc-001",
+  "environment": "prod",
+  "serviceName": "user-authentication",
+  "collectionRefId": "colrefid31232",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-001",
+      "jobDetailId": "jdID324321",
+      "path": "/jobs/auth",
+      "fileName": "auth_job_001.log",
+      "jobDate": "2025-05-15T10:00:00Z",
+      "initiatedFrom": "scheduler",
+      "status": "success",
+      "jobName": "AuthJob",
+      "jobGroup": "auth-jobs",
+      "updatedDateTime": "2025-05-15T10:05:00Z",
+      "updatedBy": "system"
+    }
+  ],
+  "createdBy": "admin",
+  "createdDateTime": "2025-05-14T08:00:00Z",
+  "updatedBy": "admin",
+  "updatedDateTime": "2025-05-15T10:05:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb7957"
+  },
+  "uniqueId": "svc-002",
+  "environment": "dev",
+  "serviceName": "payment-processing",
+  "collectionRefId": "colrefid98212",
+  "status": "in_progress",
+  "auditTrail": [
+    {
+      "jobId": "job-002",
+      "jobDetailId": "jdID874561",
+      "path": "/jobs/payments",
+      "fileName": "payment_002.log",
+      "jobDate": "2025-05-16T09:30:00Z",
+      "initiatedFrom": "manual",
+      "status": "running",
+      "jobName": "PaymentJob",
+      "jobGroup": "payment-jobs",
+      "updatedDateTime": "2025-05-16T09:35:00Z",
+      "updatedBy": "dev_user"
+    }
+  ],
+  "createdBy": "dev_user",
+  "createdDateTime": "2025-05-16T09:00:00Z",
+  "updatedBy": "dev_user",
+  "updatedDateTime": "2025-05-16T09:35:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb7958"
+  },
+  "uniqueId": "svc-003",
+  "environment": "test",
+  "serviceName": "data-import",
+  "collectionRefId": "colrefid76521",
+  "status": "failed",
+  "auditTrail": [
+    {
+      "jobId": "job-003",
+      "jobDetailId": "jdID112233",
+      "path": "/jobs/import",
+      "fileName": "import_fail.log",
+      "jobDate": "2025-05-17T11:00:00Z",
+      "initiatedFrom": "scheduler",
+      "status": "error",
+      "jobName": "ImportJob",
+      "jobGroup": "data-jobs",
+      "updatedDateTime": "2025-05-17T11:15:00Z",
+      "updatedBy": "qa"
+    }
+  ],
+  "createdBy": "qa",
+  "createdDateTime": "2025-05-17T10:55:00Z",
+  "updatedBy": "qa",
+  "updatedDateTime": "2025-05-17T11:15:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb7959"
+  },
+  "uniqueId": "svc-004",
+  "environment": "prod",
+  "serviceName": "email-notifier",
+  "collectionRefId": "colrefid44664",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-004",
+      "jobDetailId": "jdID334455",
+      "path": "/jobs/email",
+      "fileName": "email_notify_004.log",
+      "jobDate": "2025-05-15T07:00:00Z",
+      "initiatedFrom": "api",
+      "status": "success",
+      "jobName": "EmailJob",
+      "jobGroup": "notif-jobs",
+      "updatedDateTime": "2025-05-15T07:10:00Z",
+      "updatedBy": "system"
+    }
+  ],
+  "createdBy": "system",
+  "createdDateTime": "2025-05-15T06:50:00Z",
+  "updatedBy": "system",
+  "updatedDateTime": "2025-05-15T07:10:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb795a"
+  },
+  "uniqueId": "svc-005",
+  "environment": "qa",
+  "serviceName": "reporting-engine",
+  "collectionRefId": "colrefid44511",
+  "status": "in_progress",
+  "auditTrail": [
+    {
+      "jobId": "job-005",
+      "jobDetailId": "jdID998877",
+      "path": "/jobs/report",
+      "fileName": "reporting_may.log",
+      "jobDate": "2025-05-18T06:00:00Z",
+      "initiatedFrom": "manual",
+      "status": "generating",
+      "jobName": "MonthlyReport",
+      "jobGroup": "report-jobs",
+      "updatedDateTime": "2025-05-18T06:05:00Z",
+      "updatedBy": "qa_user"
+    }
+  ],
+  "createdBy": "qa_user",
+  "createdDateTime": "2025-05-18T06:00:00Z",
+  "updatedBy": "qa_user",
+  "updatedDateTime": "2025-05-18T06:05:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb795b"
+  },
+  "uniqueId": "svc-006",
+  "environment": "dev",
+  "serviceName": "sync-service",
+  "collectionRefId": "colrefid11223",
+  "status": "failed",
+  "auditTrail": [
+    {
+      "jobId": "job-006",
+      "jobDetailId": "jdID556677",
+      "path": "/jobs/sync",
+      "fileName": "sync_error.log",
+      "jobDate": "2025-05-18T09:00:00Z",
+      "initiatedFrom": "scheduler",
+      "status": "timeout",
+      "jobName": "DataSyncJob",
+      "jobGroup": "sync-jobs",
+      "updatedDateTime": "2025-05-18T09:05:00Z",
+      "updatedBy": "system"
+    }
+  ],
+  "createdBy": "system",
+  "createdDateTime": "2025-05-18T09:00:00Z",
+  "updatedBy": "system",
+  "updatedDateTime": "2025-05-18T09:05:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb795c"
+  },
+  "uniqueId": "svc-007",
+  "environment": "test",
+  "serviceName": "data-cleaner",
+  "collectionRefId": "colrefid77584",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-007",
+      "jobDetailId": "jdID332244",
+      "path": "/jobs/clean",
+      "fileName": "cleanup_job.log",
+      "jobDate": "2025-05-13T14:00:00Z",
+      "initiatedFrom": "api",
+      "status": "success",
+      "jobName": "CleanupJob",
+      "jobGroup": "maintenance",
+      "updatedDateTime": "2025-05-13T14:20:00Z",
+      "updatedBy": "admin"
+    }
+  ],
+  "createdBy": "admin",
+  "createdDateTime": "2025-05-13T14:00:00Z",
+  "updatedBy": "admin",
+  "updatedDateTime": "2025-05-13T14:20:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb795d"
+  },
+  "uniqueId": "svc-008",
+  "environment": "prod",
+  "serviceName": "order-processor",
+  "collectionRefId": "colrefid33445",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-008",
+      "jobDetailId": "jdID887766",
+      "path": "/jobs/orders",
+      "fileName": "orders_2025.log",
+      "jobDate": "2025-05-11T10:30:00Z",
+      "initiatedFrom": "manual",
+      "status": "success",
+      "jobName": "OrderJob",
+      "jobGroup": "order-jobs",
+      "updatedDateTime": "2025-05-11T10:45:00Z",
+      "updatedBy": "ops"
+    }
+  ],
+  "createdBy": "ops",
+  "createdDateTime": "2025-05-11T10:30:00Z",
+  "updatedBy": "ops",
+  "updatedDateTime": "2025-05-11T10:45:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb795e"
+  },
+  "uniqueId": "svc-009",
+  "environment": "qa",
+  "serviceName": "user-profile",
+  "collectionRefId": "colrefid12828",
+  "status": "in_progress",
+  "auditTrail": [
+    {
+      "jobId": "job-009",
+      "jobDetailId": "jdID332287",
+      "path": "/jobs/user",
+      "fileName": "profile_update.log",
+      "jobDate": "2025-05-12T15:00:00Z",
+      "initiatedFrom": "api",
+      "status": "updating",
+      "jobName": "UserProfileJob",
+      "jobGroup": "user-jobs",
+      "updatedDateTime": "2025-05-12T15:10:00Z",
+      "updatedBy": "admin"
+    }
+  ],
+  "createdBy": "admin",
+  "createdDateTime": "2025-05-12T15:00:00Z",
+  "updatedBy": "admin",
+  "updatedDateTime": "2025-05-12T15:10:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dced0b8c3acb93bb795f"
+  },
+  "uniqueId": "svc-010",
+  "environment": "test",
+  "serviceName": "file-uploader",
+  "collectionRefId": "colrefid99812",
+  "status": "failed",
+  "auditTrail": [
+    {
+      "jobId": "job-010",
+      "jobDetailId": "jdID441188",
+      "path": "/jobs/upload",
+      "fileName": "upload_fail.log",
+      "jobDate": "2025-05-10T08:30:00Z",
+      "initiatedFrom": "api",
+      "status": "error",
+      "jobName": "FileUploadJob",
+      "jobGroup": "upload-jobs",
+      "updatedDateTime": "2025-05-10T08:45:00Z",
+      "updatedBy": "uploader"
+    }
+  ],
+  "createdBy": "uploader",
+  "createdDateTime": "2025-05-10T08:30:00Z",
+  "updatedBy": "uploader",
+  "updatedDateTime": "2025-05-10T08:45:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb798b"
+  },
+  "uniqueId": "svc-001",
+  "environment": "prod",
+  "serviceName": "user-authentication",
+  "collectionRefId": "colrefid31232",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-001",
+      "jobDetailId": "jdID324321",
+      "path": "/jobs/auth",
+      "fileName": "auth_job_001.log",
+      "jobDate": "2025-05-15T10:00:00Z",
+      "initiatedFrom": "scheduler",
+      "status": "success",
+      "jobName": "AuthJob",
+      "jobGroup": "auth-jobs",
+      "updatedDateTime": "2025-05-15T10:05:00Z",
+      "updatedBy": "system"
+    }
+  ],
+  "createdBy": "admin",
+  "createdDateTime": "2025-05-14T08:00:00Z",
+  "updatedBy": "admin",
+  "updatedDateTime": "2025-05-15T10:05:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb798c"
+  },
+  "uniqueId": "svc-002",
+  "environment": "dev",
+  "serviceName": "payment-processing",
+  "collectionRefId": "colrefid98212",
+  "status": "in_progress",
+  "auditTrail": [
+    {
+      "jobId": "job-002",
+      "jobDetailId": "jdID874561",
+      "path": "/jobs/payments",
+      "fileName": "payment_002.log",
+      "jobDate": "2025-05-16T09:30:00Z",
+      "initiatedFrom": "manual",
+      "status": "running",
+      "jobName": "PaymentJob",
+      "jobGroup": "payment-jobs",
+      "updatedDateTime": "2025-05-16T09:35:00Z",
+      "updatedBy": "dev_user"
+    }
+  ],
+  "createdBy": "dev_user",
+  "createdDateTime": "2025-05-16T09:00:00Z",
+  "updatedBy": "dev_user",
+  "updatedDateTime": "2025-05-16T09:35:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb798d"
+  },
+  "uniqueId": "svc-003",
+  "environment": "test",
+  "serviceName": "data-import",
+  "collectionRefId": "colrefid76521",
+  "status": "failed",
+  "auditTrail": [
+    {
+      "jobId": "job-003",
+      "jobDetailId": "jdID112233",
+      "path": "/jobs/import",
+      "fileName": "import_fail.log",
+      "jobDate": "2025-05-17T11:00:00Z",
+      "initiatedFrom": "scheduler",
+      "status": "error",
+      "jobName": "ImportJob",
+      "jobGroup": "data-jobs",
+      "updatedDateTime": "2025-05-17T11:15:00Z",
+      "updatedBy": "qa"
+    }
+  ],
+  "createdBy": "qa",
+  "createdDateTime": "2025-05-17T10:55:00Z",
+  "updatedBy": "qa",
+  "updatedDateTime": "2025-05-17T11:15:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb798e"
+  },
+  "uniqueId": "svc-004",
+  "environment": "prod",
+  "serviceName": "email-notifier",
+  "collectionRefId": "colrefid44664",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-004",
+      "jobDetailId": "jdID334455",
+      "path": "/jobs/email",
+      "fileName": "email_notify_004.log",
+      "jobDate": "2025-05-15T07:00:00Z",
+      "initiatedFrom": "api",
+      "status": "success",
+      "jobName": "EmailJob",
+      "jobGroup": "notif-jobs",
+      "updatedDateTime": "2025-05-15T07:10:00Z",
+      "updatedBy": "system"
+    }
+  ],
+  "createdBy": "system",
+  "createdDateTime": "2025-05-15T06:50:00Z",
+  "updatedBy": "system",
+  "updatedDateTime": "2025-05-15T07:10:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb798f"
+  },
+  "uniqueId": "svc-005",
+  "environment": "qa",
+  "serviceName": "reporting-engine",
+  "collectionRefId": "colrefid44511",
+  "status": "in_progress",
+  "auditTrail": [
+    {
+      "jobId": "job-005",
+      "jobDetailId": "jdID998877",
+      "path": "/jobs/report",
+      "fileName": "reporting_may.log",
+      "jobDate": "2025-05-18T06:00:00Z",
+      "initiatedFrom": "manual",
+      "status": "generating",
+      "jobName": "MonthlyReport",
+      "jobGroup": "report-jobs",
+      "updatedDateTime": "2025-05-18T06:05:00Z",
+      "updatedBy": "qa_user"
+    }
+  ],
+  "createdBy": "qa_user",
+  "createdDateTime": "2025-05-18T06:00:00Z",
+  "updatedBy": "qa_user",
+  "updatedDateTime": "2025-05-18T06:05:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb7990"
+  },
+  "uniqueId": "svc-006",
+  "environment": "dev",
+  "serviceName": "sync-service",
+  "collectionRefId": "colrefid11223",
+  "status": "failed",
+  "auditTrail": [
+    {
+      "jobId": "job-006",
+      "jobDetailId": "jdID556677",
+      "path": "/jobs/sync",
+      "fileName": "sync_error.log",
+      "jobDate": "2025-05-18T09:00:00Z",
+      "initiatedFrom": "scheduler",
+      "status": "timeout",
+      "jobName": "DataSyncJob",
+      "jobGroup": "sync-jobs",
+      "updatedDateTime": "2025-05-18T09:05:00Z",
+      "updatedBy": "system"
+    }
+  ],
+  "createdBy": "system",
+  "createdDateTime": "2025-05-18T09:00:00Z",
+  "updatedBy": "system",
+  "updatedDateTime": "2025-05-18T09:05:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb7991"
+  },
+  "uniqueId": "svc-007",
+  "environment": "test",
+  "serviceName": "data-cleaner",
+  "collectionRefId": "colrefid77584",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-007",
+      "jobDetailId": "jdID332244",
+      "path": "/jobs/clean",
+      "fileName": "cleanup_job.log",
+      "jobDate": "2025-05-13T14:00:00Z",
+      "initiatedFrom": "api",
+      "status": "success",
+      "jobName": "CleanupJob",
+      "jobGroup": "maintenance",
+      "updatedDateTime": "2025-05-13T14:20:00Z",
+      "updatedBy": "admin"
+    }
+  ],
+  "createdBy": "admin",
+  "createdDateTime": "2025-05-13T14:00:00Z",
+  "updatedBy": "admin",
+  "updatedDateTime": "2025-05-13T14:20:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb7992"
+  },
+  "uniqueId": "svc-008",
+  "environment": "prod",
+  "serviceName": "order-processor",
+  "collectionRefId": "colrefid33445",
+  "status": "completed",
+  "auditTrail": [
+    {
+      "jobId": "job-008",
+      "jobDetailId": "jdID887766",
+      "path": "/jobs/orders",
+      "fileName": "orders_2025.log",
+      "jobDate": "2025-05-11T10:30:00Z",
+      "initiatedFrom": "manual",
+      "status": "success",
+      "jobName": "OrderJob",
+      "jobGroup": "order-jobs",
+      "updatedDateTime": "2025-05-11T10:45:00Z",
+      "updatedBy": "ops"
+    }
+  ],
+  "createdBy": "ops",
+  "createdDateTime": "2025-05-11T10:30:00Z",
+  "updatedBy": "ops",
+  "updatedDateTime": "2025-05-11T10:45:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb7993"
+  },
+  "uniqueId": "svc-009",
+  "environment": "qa",
+  "serviceName": "user-profile",
+  "collectionRefId": "colrefid12828",
+  "status": "in_progress",
+  "auditTrail": [
+    {
+      "jobId": "job-009",
+      "jobDetailId": "jdID332287",
+      "path": "/jobs/user",
+      "fileName": "profile_update.log",
+      "jobDate": "2025-05-12T15:00:00Z",
+      "initiatedFrom": "api",
+      "status": "updating",
+      "jobName": "UserProfileJob",
+      "jobGroup": "user-jobs",
+      "updatedDateTime": "2025-05-12T15:10:00Z",
+      "updatedBy": "admin"
+    }
+  ],
+  "createdBy": "admin",
+  "createdDateTime": "2025-05-12T15:00:00Z",
+  "updatedBy": "admin",
+  "updatedDateTime": "2025-05-12T15:10:00Z",
+  "_class": "com.company.services.JobStatus"
+},
+{
+  "_id": {
+    "$oid": "6829dcee0b8c3acb93bb7994"
+  },
+  "uniqueId": "svc-010",
+  "environment": "test",
+  "serviceName": "file-uploader",
+  "collectionRefId": "colrefid99812",
+  "status": "failed",
+  "auditTrail": [
+    {
+      "jobId": "job-010",
+      "jobDetailId": "jdID441188",
+      "path": "/jobs/upload",
+      "fileName": "upload_fail.log",
+      "jobDate": "2025-05-10T08:30:00Z",
+      "initiatedFrom": "api",
+      "status": "error",
+      "jobName": "FileUploadJob",
+      "jobGroup": "upload-jobs",
+      "updatedDateTime": "2025-05-10T08:45:00Z",
+      "updatedBy": "uploader"
+    }
+  ],
+  "createdBy": "uploader",
+  "createdDateTime": "2025-05-10T08:30:00Z",
+  "updatedBy": "uploader",
+  "updatedDateTime": "2025-05-10T08:45:00Z",
+  "_class": "com.company.services.JobStatus"
+}]
